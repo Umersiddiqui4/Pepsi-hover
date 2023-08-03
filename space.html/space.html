@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space & Orbit</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+          background-image: url(./img/download.jpg);
+     
+            display: flex;
+      
+            align-items: center;
+            box-sizing: border-box;
+            color: white;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            position: relative;
+
+        }
+
+        .sun {
+          
+            position: absolute;
+            height: 10em;
+            width: 10em;
+           
+            background-color: rgb(255, 89, 0);
+            border-radius: 50%;
+            box-shadow: 0 0 3em 2em rgb(255, 221, 0);
+            
+
+        }
+        .one::before {
+            content: "";
+            position: absolute;
+            top: 2em;
+            left: 16em;
+            height: 2em;
+            width: 2em;
+            border-radius: 50%;
+            background-color: burlywood;
+     
+        }
+
+        .one {
+            position: absolute;
+            border-style: solid;
+            width: 20em;
+            height: 20em;
+            border-color: transparent burlywood transparent;
+            top: -5em;
+            left: -5em;
+            border-width: 0.1em 0.1em 0 0;
+        
+            border-radius: 50%;
+            animation: orbit 8s linear infinite;
+  
+
+
+        }
+
+        .earth::before {
+            content: "";
+            position: absolute;
+            top: 3.5em;
+            left: 25em;
+            height: 4em;
+            width: 4em;
+            border-radius: 50%;
+            background-image: -webkit-radial-gradient(blue, blue, blue);
+            
+        }
+
+        .earth {
+            position: absolute;
+            border-style: solid;
+            width: 30em;
+            height: 30em;
+            border-color: transparent aqua transparent;
+            top: -10em;
+            left: -10em;
+            border-width: 0.2em 0.2em 0 0;
+         
+            border-radius: 50%;
+            animation: orbit 10s linear infinite;
+        }
+        .moon {
+            position: absolute;
+            border-style: solid;
+            width: 8em;
+            height: 8em;
+            border-color: white transparent transparent transparent;
+            top: 1.5em;
+            left: 23em;
+            border-width: 0.1em 0.1em 0 0;
+            
+            border-radius: 50%;
+            animation: orbit- 4s linear infinite;
+
+        }
+
+        .moon::before {
+            content: "";
+            position: absolute;
+       
+            left: 6em;
+            height: 2em;
+            width: 2em;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 0 3em 1.5em white;
+         
+        }
+        .mars::before {
+            content: "";
+            position: absolute;
+            top: 3.5em;
+            left: 32em;
+            height: 4em;
+            width: 4em;
+            border-radius: 50%;
+            background-image: -webkit-radial-gradient(pink, red, red);
+    
+        }
+
+        .mars {
+            position: absolute;
+            border-style: solid;
+            width: 40em;
+            height: 40em;
+            border-color: transparent rgb(201, 66, 88) transparent;
+            top: -15em;
+            left: -15em;
+            border-width: 0.2em 0.2em 0 0;
+          
+            border-radius: 50%;
+            animation: orbit 20s linear infinite;
+            
+
+        }
+        .jupiter::before {
+            content: "";
+            position: absolute;
+            top: 4em;
+            left: 52em;
+            height: 16em;
+            width: 16em;
+            border-radius: 50%;
+            background-color:rgb(234, 164, 24) ;
+          
+        }
+
+        .jupiter {
+            position: absolute;
+            border-style: solid;
+            width: 70em;
+            height: 70em;
+            border-color: transparent rgb(201, 162, 44) transparent;
+            top: -30em;
+            left: -30em;
+            border-width: 0.5em 0.5em 0 0;
+          
+            border-radius: 50%;
+            animation: orbit 25s linear infinite;
+        
+
+
+        }
+
+      
+
+     
+
+        @keyframes orbit {
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes orbit- {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+      
+    </style>
+</head>
+
+<body>
+   
+    <div class="container">
+        <div class="sun">
+            <div class="one"></div>
+            <div class="earth">
+                <div class="moon"></div>
+            </div>
+            <div class="mars"></div>
+            <div class="jupiter"></div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
